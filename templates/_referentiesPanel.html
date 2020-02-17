@@ -1,0 +1,47 @@
+<section id="mod-references" data-header="dark">
+    {% for entry in craft.entries.section('referencies')%}
+
+    <div class="container">
+        <h2>{{entry.referencieHeading}}</h2>
+        <div class="slider">
+
+            <div class="slide">
+                <h4>{{entry.slide1Heading}}</h4>
+                <h5>{{entry.slide1Description}}</h5>
+                <p>{{entry.slide1Description}}</p>
+            </div>
+
+            <div class="slide">
+                <h4>{{entry.slide2Heading}}</h4>
+                <h5>{{entry.slide2Description}}</h5>
+                <p>{{entry.slide2Description}}</p>
+            </div>
+
+            <div class="slide">
+                <h4>{{entry.slide3Heading}}</h4>
+                <h5>{{entry.slide3Description}}</h5>
+                <p>{{entry.slide3Description}}</p>
+            </div>
+
+            <div class="slide">
+                <h4>{{entry.slide4Heading}}</h4>
+                <h5>{{entry.slide4Description}}</h5>
+                <p>{{entry.slide4Description}}</p>
+            </div>
+
+            <div class="slide">
+                <h4>{{entry.slide5Heading}}</h4>
+                <h5>{{entry.slide5Description}}</h5>
+                <p>{{entry.slide5Description}}</p>
+            </div>
+
+            <span class="arrow arrow-prev"><img src="assets/svg/arrow-left.svg" alt=""></span>
+            <span class="arrow arrow-next"><img src="assets/svg/arrow-right.svg" alt=""></span>
+        </div>
+        <div class="btn-wrap">
+            <a href="javascript:;" class="btn" data-opposite-title="Show less">Show more</a>
+        </div>
+    </div>
+    {% endfor %}
+
+</section>

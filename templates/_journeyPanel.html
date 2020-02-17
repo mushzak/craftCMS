@@ -1,0 +1,94 @@
+<section id="mod-journey" data-header="light">
+    <div class="container">
+        {% for entry in craft.entries.section('journey')%}
+
+        <h2>{{entry.journeyHeading}}</h2>
+        <p class="intro">{{entry.journeyDescritption}}</p>
+        <div class="tabs">
+            <div class="links">
+                <a href="tab-01" class="tab-link active"><span>1</span></a>
+                <a href="tab-02" class="tab-link"><span>2</span></a>
+                <a href="tab-03" class="tab-link"><span>3</span></a>
+                <a href="tab-04" class="tab-link"><span>4</span></a>
+                <a href="tab-05" class="tab-link"><span>5</span></a>
+            </div>
+
+            {% set option1Image = "" %}
+            {% for asset in entry.option1Image%}
+            {% set option1Image = asset.url %}
+            {% endfor %}
+
+            <div class="content active" data-tab="tab-01">
+                <div class="image">
+                    <img src="{{option1Image}}" alt="">
+                </div>
+                <div class="text">
+                    <h3>{{entry. option1Heading }}</h3>
+                    <p>{{ entry.option1Description }}</p>
+                </div>
+            </div>
+
+            {% set option2Image = "" %}
+            {% for asset in entry.option1Image%}
+            {% set option2Image = asset.url %}
+            {% endfor %}
+
+            <div class="content" data-tab="tab-02">
+                <div class="image">
+                    <img src="{{option2Image}}" alt="">
+                </div>
+                <div class="text">
+                    <h3>{{entry.option2Heading}}</h3>
+                    <p>{{entry.option2Description}}</p>
+                </div>
+            </div>
+
+            {% set option3Image = "" %}
+            {% for asset in entry.option3Image%}
+            {% set option3Image = asset.url %}
+            {% endfor %}
+
+            <div class="content" data-tab="tab-03">
+                <div class="image">
+                    <img src="{{option3Image}}" alt="">
+                </div>
+                <div class="text">
+                    <h3>{{entry.option3Heading}}</h3>
+                    <p>{{entry.option3Description}}</p>
+                </div>
+            </div>
+
+            {% set option4Image = "" %}
+            {% for asset in entry.option4Image%}
+            {% set option4Image = asset.url %}
+            {% endfor %}
+
+            <div class="content" data-tab="tab-04">
+                <div class="image">
+                    <img src="{{option4Image}}" alt="">
+                </div>
+                <div class="text">
+                    <h3>{{entry.option4Heading}}</h3>
+                    <p>{{entry.option4Description}}</p>
+                </div>
+            </div>
+
+            {% set option5Image = "" %}
+            {% for asset in entry.option5Image%}
+            {% set option5Image = asset.url %}
+            {% endfor %}
+
+            <div class="content" data-tab="tab-05">
+                <div class="image">
+                    <img src="{{option5Image}}" alt="">
+                </div>
+                <div class="text">
+                    <h3>{{entry.option5Heading}}</h3>
+                    <p>{{entry.option5Description}}</p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+

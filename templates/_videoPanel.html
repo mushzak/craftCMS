@@ -1,0 +1,17 @@
+{% for entry in craft.entries.section('video')%}
+
+<section id="mod-video" data-header="orange">
+    <div class="container">
+        <h2>{{entry.videoHeading}}</h2>
+        <p class="intro">{{entry.videoDescription}}</p>
+    </div>
+
+    {% set videoImage = "" %}
+    {% for asset in entry.videoImage	%}
+    {% set videoImage = asset.url %}
+    {% endfor %}
+
+    <div class="video-wrap" data-poster="{{videoImage}}" data-type="youtube" data-video-id="bTqVqk7FSmY"></div>
+</section>
+
+{% endfor %}

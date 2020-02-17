@@ -1,0 +1,114 @@
+<section id="mod-features" data-header="orange">
+    {% for entry in craft.entries.section('features')%}
+    <div class="container">
+        <h2>{{entry.featuresHeading}}</h2>
+
+        {% set icon1 = "" %}
+        {% for asset in entry.icon1%}
+        {% set icon1 = asset.url %}
+        {% endfor %}
+
+        <div class="features-row">
+            <div class="feature">
+                <div class="title">
+                    <img src="{{icon1}}" alt="">
+                    <h4>{{entry.snippet1Heading}}</h4>
+                </div>
+                <p>{{entry.snippet1Description}}</p>
+            </div>
+
+            {% set icon2 = "" %}
+            {% for asset in entry.icon2%}
+            {% set icon2 = asset.url %}
+            {% endfor %}
+
+            <div class="feature">
+                <div class="title">
+                    <img src="{{icon2}}" alt="">
+                    <h4>{{entry.snippet2Heading}}</h4>
+                </div>
+                <p>{{entry.snippet2Description}}</p>
+            </div>
+
+            {% set icon3 = "" %}
+            {% for asset in entry.icon3%}
+            {% set icon3 = asset.url %}
+            {% endfor %}
+
+            <div class="feature">
+                <div class="title">
+                    <img src="{{icon3}}" alt="">
+                    <h4>{{entry.snippet3Heading}}</h4>
+                </div>
+                <p>{{entry.snippet3Description}}</p>
+            </div>
+
+            {% set icon4 = "" %}
+            {% for asset in entry.icon4%}
+            {% set icon4 = asset.url %}
+            {% endfor %}
+
+            <div class="feature">
+                <div class="title">
+                    <img src="{{icon4}}" alt="">
+                    <h4>{{entry.snippet4Heading}}</h4>
+                </div>
+                <p>{{entry.snippet4Description}}</p>
+            </div>
+
+            {% set icon5 = "" %}
+            {% for asset in entry.icon5%}
+            {% set icon5 = asset.url %}
+            {% endfor %}
+
+            <div class="feature">
+                <div class="title">
+                    <img src="{{icon5}}" alt="">
+                    <h4>{{entry.snippet5Heading}}</h4>
+                </div>
+                <p>{{entry.snippet5Description}}</p>
+            </div>
+
+            {% set icon6 = "" %}
+            {% for asset in entry.icon6%}
+            {% set icon6 = asset.url %}
+            {% endfor %}
+
+            <div class="feature">
+                <div class="title">
+                    <img src="{{icon6}}" alt="">
+                    <h4>{{entry.snippet6Heading}}</h4>
+                </div>
+                <p>{{entry.snippet6Description}}</p>
+            </div>
+        </div>
+    </div>
+    <div class="stats">
+
+        {% set featuresSideImage = "" %}
+        {% for asset in entry.featuresSideImage%}
+        {% set featuresSideImage = asset.url %}
+        {% endfor %}
+
+        <img src="{{entry.featuresSideImage}}" class="decoration-image" alt="">
+        <div class="container">
+            <div class="stat">
+                <h3>{{entry.stat1}}</h3>
+                <h5>{{entry.stat1Desc}}</h5>
+            </div>
+            <div class="stat">
+                <h3>{{entry.stat2}}</h3>
+                <h5>{{entry.stat2Desc}}</h5>
+            </div>
+            <div class="stat">
+                <h3>{{entry.stat3}}</h3>
+                <h5>{{entry.stat3Desc}}</h5>
+            </div>
+            <div class="stat">
+                <h3>{{entry.stat4}}</h3>
+                <h5>{{entry.stat4Desc}}</h5>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</section>

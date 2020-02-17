@@ -1,0 +1,55 @@
+{% for entry in craft.entries.section('home').type('home') %}
+<section id="mod-banner" data-header="light">
+    <div class="container">
+        <div class="info">
+            <h1>{{entry.heading}}</h1>
+            <p class="intro">{{entry.description}}</p>
+            <a href="{{entry.buttonUrl}}" data-scroll class="btn">{{entry.buttonText}}</a>
+        </div>
+
+        {% set heroImage = "" %}
+        {% for asset in entry.heroImage%}
+            {% set heroImage = asset.url %}
+        {% endfor %}
+
+        {% set logo1 = "" %}
+        {% for asset in entry.logo1%}
+        {% set logo1 = asset.url %}
+        {% endfor %}
+
+        {% set logo2 = "" %}
+        {% for asset in entry.logo2%}
+        {% set logo2 = asset.url %}
+        {% endfor %}
+
+        {% set logo3 = "" %}
+        {% for asset in entry.logo3%}
+        {% set logo3 = asset.url %}
+        {% endfor %}
+
+        {% set logo4 = "" %}
+        {% for asset in entry.logo4%}
+        {% set logo4 = asset.url %}
+        {% endfor %}
+
+        {% set logo5 = "" %}
+        {% for asset in entry.logo5%}
+        {% set logo5 = asset.url %}
+        {% endfor %}
+
+
+        <div class="image">
+            <img src="{{heroImage}}" alt="">
+        </div>
+    </div>
+    <div class="logos">
+        <div class="container">
+            <img src="{{logo1}}" alt="">
+            <img src="{{logo2}}" alt="">
+            <img src="{{logo3}}" alt="">
+            <img src="{{logo4}}" alt="">
+            <img src="{{logo5}}" alt="">
+        </div>
+    </div>
+</section>
+{% endfor %}

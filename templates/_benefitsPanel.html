@@ -1,0 +1,71 @@
+<section id="mod-benefits" data-header="dark">
+    <div class="container">
+
+        {% for entry in craft.entries.section('benefits')%}
+        <h2>{{entry.benefitsHeading}}</h2>
+        <p class="intro">{{entry.benefitsndescription}}</p>
+        <div class="bnf-list">
+
+            {% set image1 = "" %}
+            {% for asset in entry.image1%}
+            {% set image1 = asset.url %}
+            {% endfor %}
+
+            <div class="item">
+                <div class="ico-wrap dark">
+                    <img src="{{image1}}" alt="">
+                </div>
+                <div class="info">
+                    <h4>{{entry.heading1}}</h4>
+                    <p>{{entry.description1 }}</p>
+                </div>
+            </div>
+
+            {% set image2 = "" %}
+            {% for asset in entry.image2%}
+            {% set image2 = asset.url %}
+            {% endfor %}
+
+            <div class="item">
+                <div class="ico-wrap orange">
+                    <img src="{{image2}}" alt="">
+                </div>
+                <div class="info">
+                    <h4>{{entry.heading2}}</h4>
+                    <p>{{entry.description2}}</p>
+                </div>
+            </div>
+
+            {% set image3 = "" %}
+            {% for asset in entry.image3%}
+            {% set image3 = asset.url %}
+            {% endfor %}
+
+            <div class="item">
+                <div class="ico-wrap blue">
+                    <img src="{{image3}}" alt="">
+                </div>
+                <div class="info">
+                    <h4>{{entry.heading3}}</h4>
+                    <p>{{entry.description3}}</p>
+                </div>
+            </div>
+
+            {% set sideImage = "" %}
+            {% for asset in entry.sideImage%}
+            {% set sideImage = asset.url %}
+            {% endfor %}
+
+            {% set sideImage2 = "" %}
+            {% for asset in entry.sideImage2%}
+            {% set sideImage2 = asset.url %}
+            {% endfor %}
+
+
+            <img src="{{sideImage}}" class="sticker mobile" alt="">
+            <img src="{{sideImage2}}" class="sticker" alt="">
+        </div>
+
+        {% endfor %}
+    </div>
+</section>
